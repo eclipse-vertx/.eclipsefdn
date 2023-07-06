@@ -46,8 +46,6 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -77,20 +75,14 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('3.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -151,20 +143,14 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('3.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -187,20 +173,14 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('3.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -215,14 +195,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -237,14 +213,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -281,14 +253,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -336,14 +304,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -359,14 +323,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -380,8 +340,6 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -427,26 +385,18 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('3.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('_old/*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
       environments: [
@@ -473,14 +423,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
@@ -500,14 +446,10 @@ orgs.newOrg('eclipse-vertx') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.*') {
           required_approving_review_count: null,
           requires_approving_reviews: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
         },
       ],
     },
