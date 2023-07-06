@@ -39,8 +39,6 @@ orgs.newOrg('eclipse-vertx') {
       default_branch: "master",
       description: "Vertx community health files",
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
@@ -57,8 +55,6 @@ orgs.newOrg('eclipse-vertx') {
       description: "Vert.x is a tool-kit for building reactive applications on the JVM",
       has_projects: false,
       homepage: "http://vertx.io",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "concurrency",
         "event-loop",
@@ -99,8 +95,6 @@ orgs.newOrg('eclipse-vertx') {
       default_branch: "master",
       has_projects: false,
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "async",
         "jwt",
@@ -175,8 +169,6 @@ orgs.newOrg('eclipse-vertx') {
       has_projects: false,
       has_wiki: false,
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "codegen",
         "reactive",
@@ -208,8 +200,6 @@ orgs.newOrg('eclipse-vertx') {
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
       description: "Development of the gRPC component for Eclipse Vert.x",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
@@ -230,8 +220,6 @@ orgs.newOrg('eclipse-vertx') {
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
       description: "vertx http proxy",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('4.*') {
@@ -253,8 +241,6 @@ orgs.newOrg('eclipse-vertx') {
       default_branch: "master",
       description: "Vert.x Json Schema",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "json",
         "schema",
@@ -298,8 +284,6 @@ orgs.newOrg('eclipse-vertx') {
       description: "Testing Vert.x applications with JUnit 5",
       has_projects: false,
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://vertx.ci.cloudbees.com/github-webhook/') {
@@ -352,8 +336,6 @@ orgs.newOrg('eclipse-vertx') {
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
       description: "OpenAPI  repository",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
@@ -373,8 +355,6 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-rabbitmq-client') {
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
@@ -392,8 +372,6 @@ orgs.newOrg('eclipse-vertx') {
       has_projects: false,
       has_wiki: false,
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "async",
         "mssql",
@@ -458,8 +436,6 @@ orgs.newOrg('eclipse-vertx') {
       default_branch: "master",
       description: "Vertx integration with tracing libraries",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "non-blocking",
         "opentracing",
@@ -489,8 +465,6 @@ orgs.newOrg('eclipse-vertx') {
       dependabot_alerts_enabled: false,
       description: "URI Template rfc6570 implementatin for Vert.x",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "uri-template",
         "vertx"
