@@ -347,6 +347,22 @@ orgs.newOrg('eclipse-vertx') {
         },
       ],
     },
+    orgs.newRepo('vertx-launcher') {
+      allow_update_branch: false,
+      description: "Vert.x Launcher",
+      homepage: "",
+      topics+: [
+        "vertx",
+        "launcher"
+      ],
+      web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: null,
+          requires_approving_reviews: false,
+        },
+      ],
+    },
     orgs.newRepo('vertx-openapi') {
       allow_merge_commit: false,
       allow_update_branch: false,
