@@ -97,6 +97,7 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-auth') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       has_projects: false,
       has_wiki: false,
       secret_scanning: "disabled",
@@ -171,6 +172,7 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-codegen') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       description: "Vert.x code generator for asynchronous polyglot APIs",
       has_projects: false,
       has_wiki: false,
@@ -251,6 +253,7 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-json-schema') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       description: "Vert.x Json Schema",
       homepage: "",
       secret_scanning: "disabled",
@@ -295,6 +298,7 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-junit5') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       description: "Testing Vert.x applications with JUnit 5",
       has_projects: false,
       has_wiki: false,
@@ -352,8 +356,8 @@ orgs.newOrg('eclipse-vertx') {
       description: "Vert.x Launcher",
       homepage: "",
       topics+: [
-        "vertx",
-        "launcher"
+        "launcher",
+        "vertx"
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
@@ -404,6 +408,7 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-sql-client') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       description: "High performance reactive SQL Client written in Java",
       has_projects: false,
       has_wiki: false,
@@ -472,6 +477,7 @@ orgs.newOrg('eclipse-vertx') {
     orgs.newRepo('vertx-tracing') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       description: "Vertx integration with tracing libraries",
       homepage: "",
       secret_scanning: "disabled",
