@@ -55,6 +55,9 @@ orgs.newOrg('eclipse-vertx') {
       allow_update_branch: false,
       default_branch: "master",
       description: "Vert.x is a tool-kit for building reactive applications on the JVM",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
       has_projects: false,
       homepage: "http://vertx.io",
       secret_scanning: "disabled",
@@ -92,6 +95,9 @@ orgs.newOrg('eclipse-vertx') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages'),
       ],
     },
     orgs.newRepo('vertx-auth') {
