@@ -35,8 +35,10 @@ orgs.newOrg('eclipse-vertx') {
   ],
   _repositories+:: [
     orgs.newRepo('.github') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       description: "Vertx community health files",
       has_wiki: false,
       web_commit_signoff_required: false,
@@ -50,8 +52,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vert.x') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       description: "Vert.x is a tool-kit for building reactive applications on the JVM",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
@@ -97,8 +101,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-auth') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       has_projects: false,
       has_wiki: false,
@@ -170,8 +176,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-codegen') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Vert.x code generator for asynchronous polyglot APIs",
       has_projects: false,
@@ -205,7 +213,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-grpc') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Development of the gRPC component for Eclipse Vert.x",
       web_commit_signoff_required: false,
@@ -225,7 +235,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-http-proxy') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "vertx http proxy",
       web_commit_signoff_required: false,
@@ -245,8 +257,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-json-schema') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Vert.x Json Schema",
       homepage: "",
@@ -288,8 +302,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-junit5') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Testing Vert.x applications with JUnit 5",
       has_projects: false,
@@ -342,7 +358,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-launcher') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       description: "Vert.x Launcher",
       homepage: "",
       topics+: [
@@ -358,8 +376,8 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-openapi') {
-      allow_merge_commit: false,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "OpenAPI  repository",
       web_commit_signoff_required: false,
@@ -379,7 +397,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-rabbitmq-client') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       web_commit_signoff_required: false,
       branch_protection_rules: [
@@ -392,8 +412,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-sql-client') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "High performance reactive SQL Client written in Java",
       has_projects: false,
@@ -459,8 +481,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-tracing') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Vertx integration with tracing libraries",
       homepage: "",
@@ -489,7 +513,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-uri-template') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "URI Template rfc6570 implementatin for Vert.x",
       homepage: "",
