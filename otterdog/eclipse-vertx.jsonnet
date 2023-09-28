@@ -443,25 +443,28 @@ orgs.newOrg('eclipse-vertx') {
       ],
     },
     orgs.newRepo('vertx-service-resolver') {
-       allow_update_branch: false,
-       description: "Vert.x Service Resolver",
-       homepage: "",
-       topics+: [
-         "java",
-         "vertx",
-         "jvm",
-         "microservices",
-         "kubernetes",
-         "loadbalancing",
-         "servicediscovery"
-       ],
-       web_commit_signoff_required: false,
-       branch_protection_rules: [
-         orgs.newBranchProtectionRule('main') {
-           required_approving_review_count: null,
-           requires_pull_request: false,
-         },
-       ],
-     },
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      description: "Vert.x Service Resolver",
+      homepage: "",
+      topics+: [
+        "java",
+        "vertx",
+        "jvm",
+        "microservices",
+        "kubernetes",
+        "loadbalancing",
+        "servicediscovery"
+      ],
+      web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+        },
+      ],
+    },
   ],
 }
