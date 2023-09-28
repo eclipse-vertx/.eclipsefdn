@@ -539,5 +539,26 @@ orgs.newOrg('eclipse-vertx') {
         },
       ],
     },
+    orgs.newRepo('vertx-launcher') {
+       allow_update_branch: false,
+       description: "Vert.x Service Resolver",
+       homepage: "",
+       topics+: [
+         "java",
+         "vertx",
+         "jvm",
+         "microservices",
+         "kubernetes",
+         "loadbalancing",
+         "servicediscovery"
+       ],
+       web_commit_signoff_required: false,
+       branch_protection_rules: [
+         orgs.newBranchProtectionRule('main') {
+           required_approving_review_count: null,
+           requires_approving_reviews: false,
+         },
+       ],
+     },
   ],
 }
