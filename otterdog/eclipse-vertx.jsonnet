@@ -118,42 +118,6 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
-      webhooks: [
-        orgs.newRepoWebhook('https://hooks.waffle.io/api/projects/550fed359a36661e00f6c41e/sources/550fed6bf3a8371e00455e11/receive') {
-          content_type: "json",
-          events+: [
-            "*"
-          ],
-          secret: "********",
-        },
-        orgs.newRepoWebhook('https://hooks.waffle.io/api/projects/550fed359a36661e00f6c41e/sources/557449a2fcbe6a5900539791/receive') {
-          content_type: "json",
-          events+: [
-            "*"
-          ],
-          secret: "********",
-        },
-        orgs.newRepoWebhook('https://vertx.ci.cloudbees.com/github-webhook/') {
-          content_type: "json",
-          events+: [
-            "pull_request",
-            "push"
-          ],
-        },
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          active: false,
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
@@ -271,21 +235,6 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
-      webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          active: false,
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
@@ -311,37 +260,6 @@ orgs.newOrg('eclipse-vertx') {
       has_projects: false,
       has_wiki: false,
       web_commit_signoff_required: false,
-      webhooks: [
-        orgs.newRepoWebhook('https://vertx.ci.cloudbees.com/github-webhook/') {
-          events+: [
-            "push"
-          ],
-        },
-        orgs.newRepoWebhook('https://ci.appveyor.com/api/github/webhook?id=vl87j5mlpp1f3na6') {
-          events+: [
-            "push"
-          ],
-        },
-        orgs.newRepoWebhook('https://ci.appveyor.com/api/github/webhook?id=ienn9k13r378t6kr') {
-          events+: [
-            "pull_request",
-            "push"
-          ],
-        },
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          active: false,
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
@@ -435,21 +353,6 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
-      webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          active: false,
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('3.*') {
           required_approving_review_count: null,
