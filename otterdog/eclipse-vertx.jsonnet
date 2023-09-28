@@ -556,7 +556,7 @@ orgs.newOrg('eclipse-vertx') {
        branch_protection_rules: [
          orgs.newBranchProtectionRule('main') {
            required_approving_review_count: null,
-           requires_approving_reviews: false,
+           requires_pull_request: false,
          },
        ],
      },
