@@ -7,10 +7,10 @@ local customBranchProtectionRule(branchName) = orgs.newBranchProtectionRule(bran
   requires_strict_status_checks: true,
 };
 
-local newVertxRepo(repoName) = orgs.newRepo(repoName) {
+local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   allow_merge_commit: true,
   allow_update_branch: false,
-  default_branch: "master",
+  default_branch: default_branch,
   delete_branch_on_merge: false,
   has_projects: false,
   homepage: "http://vertx.io",
@@ -462,7 +462,7 @@ orgs.newOrg('eclipse-vertx') {
         },
       ],
     },
-    newVertxRepo('vertx-service-resolver') {
+    newVertxRepo('vertx-service-resolver', 'master') {
       description: "Vert.x Service Resolver",
       homepage: "",
       topics+: [
