@@ -462,7 +462,7 @@ orgs.newOrg('eclipse-vertx') {
         },
       ],
     },
-    newVertxRepo('vertx-service-resolver', 'master') {
+    newVertxRepo('vertx-service-resolver', 'main') {
       description: "Vert.x Service Resolver",
       homepage: "",
       topics+: [
