@@ -1,5 +1,25 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
+local customBranchProtectionRule(branchName) = orgs.newBranchProtectionRule(branchName) {
+  required_approving_review_count: null,
+  requires_pull_request: false,
+  requires_status_checks: false,
+  requires_strict_status_checks: true,
+};
+
+local newVertxRepo(repoName) = orgs.newRepo(repoName) {
+  allow_merge_commit: true,
+  allow_update_branch: false,
+  default_branch: "master",
+  delete_branch_on_merge: false,
+  has_projects: false,
+  homepage: "http://vertx.io",
+  web_commit_signoff_required: false,
+  branch_protection_rules: [
+    customBranchProtectionRule($.default_branch) {},
+  ],
+};
+
 orgs.newOrg('eclipse-vertx') {
   settings+: {
     billing_email: "emo@eclipse.org",
@@ -442,11 +462,7 @@ orgs.newOrg('eclipse-vertx') {
         },
       ],
     },
-    orgs.newRepo('vertx-service-resolver') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      dependabot_alerts_enabled: false,
+    newVertxRepo('vertx-service-resolver') {
       description: "Vert.x Service Resolver",
       homepage: "",
       topics+: [
@@ -457,13 +473,6 @@ orgs.newOrg('eclipse-vertx') {
         "kubernetes",
         "loadbalancing",
         "servicediscovery"
-      ],
-      web_commit_signoff_required: false,
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-        },
       ],
     },
   ],
