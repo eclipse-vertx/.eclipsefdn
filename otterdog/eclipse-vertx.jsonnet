@@ -12,7 +12,6 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   allow_update_branch: false,
   default_branch: default_branch,
   delete_branch_on_merge: false,
-  has_projects: false,
   homepage: "http://vertx.io",
   web_commit_signoff_required: false,
   branch_protection_rules: [
