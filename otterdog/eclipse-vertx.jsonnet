@@ -348,6 +348,10 @@ orgs.newOrg('eclipse-vertx') {
         "loom",
         "concurrency"
       ],
+      branch_protection_rules: [
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('4.*'),
+      ],
     },
   ],
 }
