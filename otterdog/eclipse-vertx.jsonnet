@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-local customBranchProtectionRule(branchName) = orgs.newBranchProtectionRule(branchName) {
+local vertxBranchProtectionRule(branchName) = orgs.newBranchProtectionRule(branchName) {
   required_approving_review_count: null,
   requires_pull_request: false,
   requires_status_checks: false,
@@ -15,7 +15,7 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   homepage: "http://vertx.io",
   web_commit_signoff_required: false,
   branch_protection_rules: [
-    customBranchProtectionRule($.default_branch) {},
+    vertxBranchProtectionRule($.default_branch) {},
   ],
 };
 
@@ -96,24 +96,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('3.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('3.*'),
+        vertxBranchProtectionRule('4.*'),
       ],
       environments: [
         orgs.newEnvironment('github-pages'),
@@ -138,24 +123,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('3.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('3.*'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-codegen') {
@@ -175,24 +145,9 @@ orgs.newOrg('eclipse-vertx') {
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('3.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('3.*'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-grpc') {
@@ -203,18 +158,8 @@ orgs.newOrg('eclipse-vertx') {
       description: "Development of the gRPC component for Eclipse Vert.x",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-http-proxy') {
@@ -225,18 +170,8 @@ orgs.newOrg('eclipse-vertx') {
       description: "vertx http proxy",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-json-schema') {
@@ -255,18 +190,8 @@ orgs.newOrg('eclipse-vertx') {
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-junit5') {
@@ -280,18 +205,8 @@ orgs.newOrg('eclipse-vertx') {
       has_wiki: false,
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-launcher') {
@@ -319,18 +234,8 @@ orgs.newOrg('eclipse-vertx') {
       description: "OpenAPI  repository",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-rabbitmq-client') {
@@ -340,12 +245,7 @@ orgs.newOrg('eclipse-vertx') {
       dependabot_alerts_enabled: false,
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('main'),
       ],
     },
     orgs.newRepo('vertx-sql-client') {
@@ -373,30 +273,10 @@ orgs.newOrg('eclipse-vertx') {
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('3.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('_old/*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('3.*'),
+        vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('_old/*'),
       ],
       environments: [
         orgs.newEnvironment('github-pages'),
@@ -420,18 +300,8 @@ orgs.newOrg('eclipse-vertx') {
       ],
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     orgs.newRepo('vertx-uri-template') {
@@ -446,19 +316,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('4.*') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+      branch_protection_rules: [        
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('4.*'),
       ],
     },
     newVertxRepo('vertx-service-resolver', 'main') {
