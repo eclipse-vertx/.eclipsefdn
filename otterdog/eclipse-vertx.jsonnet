@@ -334,5 +334,23 @@ orgs.newOrg('eclipse-vertx') {
         "servicediscovery"
       ],
     },
+    newVertxRepo('vertx-virtual-threads', 'main') {
+      description: "Vert.x Virtual Threads",
+      homepage: "",
+      topics+: [
+        "java",
+        "vertx",
+        "jvm",
+        "virtualthreads",
+        "virtual-threads",
+        "asyncawait",
+        "async-await",
+        "loom",
+        "concurrency"
+      ],
+      branch_protection_rules+: [
+        vertxBranchProtectionRule('4.*'),
+      ],
+    },
   ],
 }
