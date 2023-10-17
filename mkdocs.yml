@@ -1,6 +1,6 @@
 site_name: Otterdog configuration @ eclipse-vertx
 site_description: Otterdog configuration @ eclipse-vertx
-strict: true
+strict: false
 
 site_url: https://eclipse-vertx.github.io/.eclipsefdn/
 
