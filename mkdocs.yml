@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-vertx.github.io/.eclipsefdn/
 
+repo_name: eclipse-vertx/.eclipsefdn
+repo_url: https://github.com/eclipse-vertx/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
