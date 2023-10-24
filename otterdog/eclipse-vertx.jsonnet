@@ -22,7 +22,6 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
 orgs.newOrg('eclipse-vertx') {
   settings+: {
     billing_email: "emo@eclipse.org",
-    default_repository_permission: "none",
     dependabot_alerts_enabled_for_new_repositories: false,
     dependabot_security_updates_enabled_for_new_repositories: false,
     dependency_graph_enabled_for_new_repositories: false,
@@ -61,6 +60,9 @@ orgs.newOrg('eclipse-vertx') {
       description: "Vertx community health files",
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
@@ -95,6 +97,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
@@ -122,6 +127,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
@@ -144,6 +152,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
@@ -157,6 +168,9 @@ orgs.newOrg('eclipse-vertx') {
       dependabot_alerts_enabled: false,
       description: "Development of the gRPC component for Eclipse Vert.x",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
@@ -169,6 +183,9 @@ orgs.newOrg('eclipse-vertx') {
       dependabot_alerts_enabled: false,
       description: "vertx http proxy",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
@@ -189,6 +206,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('4.*'),
@@ -204,6 +224,9 @@ orgs.newOrg('eclipse-vertx') {
       has_projects: false,
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('4.*'),
@@ -220,6 +243,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
@@ -233,6 +259,9 @@ orgs.newOrg('eclipse-vertx') {
       dependabot_alerts_enabled: false,
       description: "OpenAPI  repository",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
@@ -244,6 +273,9 @@ orgs.newOrg('eclipse-vertx') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
       ],
@@ -272,6 +304,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
@@ -299,6 +334,9 @@ orgs.newOrg('eclipse-vertx') {
         "zipkin"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('4.*'),
@@ -316,6 +354,9 @@ orgs.newOrg('eclipse-vertx') {
         "vertx"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [        
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
@@ -325,6 +366,9 @@ orgs.newOrg('eclipse-vertx') {
       description: "Vert.x Service Resolver",
       homepage: "",
       topics+: [
+        "async-await",
+        "asyncawait",
+        "concurrency",
         "java",
         "vertx",
         "jvm",
@@ -348,6 +392,9 @@ orgs.newOrg('eclipse-vertx') {
         "loom",
         "concurrency"
       ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules+: [
         vertxBranchProtectionRule('4.*'),
       ],
