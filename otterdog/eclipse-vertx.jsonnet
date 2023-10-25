@@ -21,7 +21,6 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
 
 orgs.newOrg('eclipse-vertx') {
   settings+: {
-    billing_email: "emo@eclipse.org",
     dependabot_alerts_enabled_for_new_repositories: false,
     dependabot_security_updates_enabled_for_new_repositories: false,
     dependency_graph_enabled_for_new_repositories: false,
