@@ -29,7 +29,6 @@ orgs.newOrg('eclipse-vertx') {
     name: "Eclipse Vert.x",
     packages_containers_internal: false,
     packages_containers_public: false,
-    readers_can_create_discussions: true,
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
