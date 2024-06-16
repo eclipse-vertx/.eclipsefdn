@@ -382,5 +382,17 @@ orgs.newOrg('eclipse-vertx') {
         vertxBranchProtectionRule('4.*'),
       ],
     },
+    newVertxRepo('vertx5-parent', 'main') {
+      description: "Vert.x 5 Parent pom",
+      homepage: "",
+      topics+: [
+        "java",
+        "vertx",
+        "maven"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
   ],
 }
