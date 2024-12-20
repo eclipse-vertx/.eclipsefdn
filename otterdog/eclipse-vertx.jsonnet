@@ -19,7 +19,7 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   ],
 };
 
-orgs.newOrg('eclipse-vertx') {
+orgs.newOrg('rt.vertx', 'eclipse-vertx') {
   settings+: {
     description: "",
     email: "emo@eclipse.org",
