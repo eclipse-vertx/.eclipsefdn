@@ -96,6 +96,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
       environments: [
         orgs.newEnvironment('github-pages'),
@@ -125,6 +126,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-codegen') {
@@ -149,6 +151,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-grpc') {
@@ -163,6 +166,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-http-proxy') {
@@ -177,6 +181,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-json-schema') {
@@ -199,6 +204,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-junit5') {
@@ -216,6 +222,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-launcher') {
@@ -232,10 +239,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         default_workflow_permissions: "write",
       },
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-        },
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-openapi') {
@@ -249,6 +254,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-rabbitmq-client') {
@@ -261,6 +267,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       },
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-sql-client') {
@@ -293,6 +300,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('3.*'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
         vertxBranchProtectionRule('_old/*'),
       ],
       environments: [
@@ -321,6 +329,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     orgs.newRepo('vertx-uri-template') {
@@ -340,6 +349,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [        
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('4.*'),
+        vertxBranchProtectionRule('5.*'),
       ],
     },
     newVertxRepo('vertx-service-resolver', 'main') {
