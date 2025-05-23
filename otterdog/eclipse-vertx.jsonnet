@@ -45,6 +45,11 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       value: "********",
     },
   ],
+  variables: [
+    orgs.newRepoVariable('VERTX_5_STABLE_BRANCH') {
+      value: "5.0",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
