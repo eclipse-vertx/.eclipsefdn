@@ -48,6 +48,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
   variables: [
     orgs.newRepoVariable('VERTX_5_STABLE_BRANCH') {
       value: "5.0",
+      visibility = "public",
     },
   ],
   _repositories+:: [
