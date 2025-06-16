@@ -443,5 +443,24 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('vertx-eventbus-bridges') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      description: "EventBus bridge implementations",
+      homepage: "",
+      topics+: [
+        "eventbus",
+        "vertx"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      branch_protection_rules: [
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+    },
   ],
 }
