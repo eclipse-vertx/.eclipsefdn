@@ -182,28 +182,6 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://vertx.ci.cloudbees.com/github-webhook/') {
-          content_type: "json",
-          events+: [
-            "pull_request",
-            "push"
-          ],
-        },
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          active: false,
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
