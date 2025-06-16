@@ -409,6 +409,10 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         "loadbalancing",
         "servicediscovery"
       ],
+      branch_protection_rules: [
+        vertxBranchProtectionRule('main'),
+        vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
     },
     newVertxRepo('vertx-virtual-threads', 'main') {
       description: "Vert.x Virtual Threads",
