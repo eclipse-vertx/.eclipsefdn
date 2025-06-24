@@ -183,18 +183,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         default_workflow_permissions: "write",
       },
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('[345].') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        vertxBranchProtectionRule('master'),
+        vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
     },
     orgs.newRepo('vertx-http-proxy') {
