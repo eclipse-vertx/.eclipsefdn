@@ -12,7 +12,7 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   allow_update_branch: true,
   default_branch: default_branch,
   delete_branch_on_merge: false,
-  homepage: "http://vertx.io",
+  homepage: "https://vertx.io",
   web_commit_signoff_required: false,
   branch_protection_rules: [
     vertxBranchProtectionRule($.default_branch) {},
@@ -80,7 +80,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_projects: false,
-      homepage: "http://vertx.io",
+      homepage: "https://vertx.io",
       topics+: [
         "concurrency",
         "event-loop",
@@ -111,6 +111,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      description: "Authentication and authorization providers for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-auth-common/java/",
       has_projects: false,
       has_wiki: false,
       topics+: [
@@ -139,7 +141,7 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       description: "Vert.x code generator for asynchronous polyglot APIs",
       has_projects: false,
       has_wiki: false,
-      homepage: "",
+      homepage: "https://vertx.io",
       topics+: [
         "codegen",
         "reactive",
@@ -158,7 +160,18 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      description: "Development of the gRPC component for Eclipse Vert.x",
+      description: "gRPC component for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-grpc/java/",
+      topics+: [
+        "grpc",
+        "http2",
+        "java",
+        "netty",
+        "protobuf",
+        "reactive",
+        "rpc",
+        "vertx"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -174,6 +187,15 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      description: "Health checks for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-health-check/java/",
+      topics+: [
+        "health-check",
+        "healthcheck",
+        "monitoring",
+        "reactive",
+        "vertx"
+      ],
       has_projects: false,
       has_wiki: false,
       secret_scanning: "disabled",
@@ -191,7 +213,15 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      description: "vertx http proxy",
+      description: "Reactive HTTP proxy for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-http-proxy/java/",
+      topics+: [
+        "http",
+        "http-proxy",
+        "proxy",
+        "reactive",
+        "vertx"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -206,8 +236,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "Vert.x Json Schema",
-      homepage: "",
+      description: "JSON Schema validation for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-json-schema/java/",
       topics+: [
         "json",
         "schema",
@@ -229,6 +259,13 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Testing Vert.x applications with JUnit 5",
+      homepage: "https://vertx.io/docs/vertx-junit5/java/",
+      topics+: [
+        "junit5",
+        "reactive",
+        "testing",
+        "vertx"
+      ],
       has_projects: false,
       has_wiki: false,
       web_commit_signoff_required: false,
@@ -243,10 +280,12 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
     orgs.newRepo('vertx-launcher') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
-      description: "Vert.x Launcher",
-      homepage: "",
+      description: "Application launcher for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-launcher-application/java/",
       topics+: [
+        "java",
         "launcher",
+        "reactive",
         "vertx"
       ],
       web_commit_signoff_required: false,
@@ -261,7 +300,16 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
     orgs.newRepo('vertx-openapi') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      description: "OpenAPI  repository",
+      description: "OpenAPI 3 contract parsing and validation for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-openapi/java/",
+      topics+: [
+        "contract",
+        "openapi",
+        "openapi3",
+        "reactive",
+        "validation",
+        "vertx"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -275,6 +323,15 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
+      description: "Reactive RabbitMQ client for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-rabbitmq-client/java/",
+      topics+: [
+        "amqp",
+        "messaging",
+        "rabbitmq",
+        "reactive",
+        "vertx"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -289,10 +346,10 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "High performance reactive SQL Client written in Java",
+      description: "High performance reactive SQL client written in Java",
       has_projects: false,
       has_wiki: false,
-      homepage: "",
+      homepage: "https://vertx.io/docs/vertx-pg-client/java/",
       topics+: [
         "async",
         "mssql",
@@ -324,8 +381,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "Vertx integration with tracing libraries",
-      homepage: "",
+      description: "Eclipse Vert.x integration with distributed tracing libraries",
+      homepage: "https://vertx.io",
       topics+: [
         "non-blocking",
         "opentracing",
@@ -347,8 +404,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      description: "URI Template rfc6570 implementatin for Vert.x",
-      homepage: "",
+      description: "URI Template (RFC 6570) implementation for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-uri-template/java/",
       topics+: [
         "uri-template",
         "vertx"
@@ -363,8 +420,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       ],
     },
     newVertxRepo('vertx-service-resolver', 'main') {
-      description: "Vert.x Service Resolver",
-      homepage: "",
+      description: "Service resolver for Eclipse Vert.x",
+      homepage: "https://vertx.io/docs/vertx-service-resolver/java/",
       topics+: [
         "async-await",
         "asyncawait",
@@ -383,8 +440,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       ],
     },
     newVertxRepo('vertx-virtual-threads', 'main') {
-      description: "Vert.x Virtual Threads",
-      homepage: "",
+      description: "Virtual threads support for Eclipse Vert.x",
+      homepage: "https://vertx.io",
       topics+: [
         "java",
         "vertx",
@@ -404,8 +461,8 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       ],
     },
     newVertxRepo('vertx5-parent', 'main') {
-      description: "Vert.x 5 Parent pom",
-      homepage: "",
+      description: "Parent POM for Eclipse Vert.x 5",
+      homepage: "https://vertx.io",
       topics+: [
         "java",
         "vertx",
@@ -419,10 +476,12 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      description: "EventBus bridge implementations",
-      homepage: "",
+      description: "EventBus bridge implementations for Eclipse Vert.x",
+      homepage: "https://vertx.io",
       topics+: [
+        "bridge",
         "eventbus",
+        "reactive",
         "vertx"
       ],
       web_commit_signoff_required: false,
