@@ -7,6 +7,20 @@ local vertxBranchProtectionRule(branchName) = orgs.newBranchProtectionRule(branc
   requires_strict_status_checks: true,
 };
 
+// Create a rule set that prevents the creation of sec-* branches
+// branches containing vulnerability patches can only be pushed to GitHub temporary forks
+// thus this rule prevents the creation of branches following this pattern
+local vertxSecurityBranchRuleset() = orgs.newRepoRuleset('Block private security branches') {
+  target: "branch",
+  enforcement: "active",
+  include_refs: [
+    "refs/heads/sec-*",
+  ],
+  allows_creations: false,
+  allows_updates: false,
+  allows_force_pushes: false,
+};
+
 local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   allow_merge_commit: true,
   allow_update_branch: true,
@@ -16,6 +30,9 @@ local newVertxRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
   web_commit_signoff_required: false,
   branch_protection_rules: [
     vertxBranchProtectionRule($.default_branch) {},
+  ],
+  rulesets: [
+    vertxSecurityBranchRuleset(),
   ],
 };
 
@@ -102,6 +119,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
@@ -132,6 +152,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
     },
     orgs.newRepo('vertx-codegen') {
       allow_merge_commit: true,
@@ -154,6 +177,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
     orgs.newRepo('vertx-grpc') {
@@ -179,6 +205,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
     orgs.newRepo('vertx-health-check') {
@@ -208,6 +237,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
     },
     orgs.newRepo('vertx-http-proxy') {
       allow_merge_commit: true,
@@ -230,6 +262,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
     },
     orgs.newRepo('vertx-json-schema') {
       allow_merge_commit: true,
@@ -251,6 +286,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
     orgs.newRepo('vertx-junit5') {
@@ -276,6 +314,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
     },
     orgs.newRepo('vertx-launcher') {
       allow_merge_commit: true,
@@ -295,6 +336,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
     orgs.newRepo('vertx-openapi') {
@@ -318,6 +362,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
     },
     orgs.newRepo('vertx-rabbitmq-client') {
       allow_merge_commit: true,
@@ -339,6 +386,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
     orgs.newRepo('vertx-sql-client') {
@@ -372,6 +422,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('[345].[x0123456789]'),
         vertxBranchProtectionRule('_old/*'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
@@ -399,6 +452,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
         vertxBranchProtectionRule('master'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
       ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
+      ],
     },
     orgs.newRepo('vertx-uri-template') {
       allow_merge_commit: true,
@@ -414,9 +470,12 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      branch_protection_rules: [        
+      branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
     newVertxRepo('vertx-service-resolver', 'main') {
@@ -491,6 +550,9 @@ orgs.newOrg('rt.vertx', 'eclipse-vertx') {
       branch_protection_rules: [
         vertxBranchProtectionRule('main'),
         vertxBranchProtectionRule('[345].[x0123456789]'),
+      ],
+      rulesets: [
+        vertxSecurityBranchRuleset(),
       ],
     },
   ],
