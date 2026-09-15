@@ -7,14 +7,14 @@ local vertxBranchProtectionRule(branchName) = orgs.newBranchProtectionRule(branc
   requires_strict_status_checks: true,
 };
 
-// Create a rule set that prevents the creation of sec-* branches
+// Create a rule set that prevents the creation of sec/* branches
 // branches containing vulnerability patches can only be pushed to GitHub temporary forks
 // thus this rule prevents the creation of branches following this pattern
 local vertxSecurityBranchRuleset() = orgs.newRepoRuleset('Block private security branches') {
   target: "branch",
   enforcement: "active",
   include_refs: [
-    "refs/heads/sec-*",
+    "refs/heads/sec/*",
   ],
   allows_creations: false,
   allows_updates: false,
